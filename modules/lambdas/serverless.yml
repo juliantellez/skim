@@ -1,0 +1,30 @@
+service: skim
+
+plugins:
+  - serverless-plugin-typescript
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+
+functions:
+  create:
+    handler: skim/create/handler.create
+    events:
+      - http:
+          path: create
+          method: post
+
+  twitterRequestToken:
+    handler: twitter/requestToken/handler.requestToken
+    events:
+      - http:
+          path: twitterRequestToken
+          method: get
+
+  twitterAccessToken:
+    handler: twitter/oauth/handler.accessToken
+    events:
+      - http:
+          path: twitterAccessToken
+          method: get
