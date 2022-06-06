@@ -14,9 +14,9 @@ const AppRoutes:React.FC = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home />} />
                 <Route path="/twitter-auth-callback" element={<TwitterAuthCallback />} />
                 <Route path="/user" element={<User />} />
+                <Route path="*" element={<Home />} />
             </Routes>
         </Router>
     )
