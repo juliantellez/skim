@@ -28,3 +28,10 @@ functions:
       - http:
           path: twitterAccessToken
           method: get
+
+  twitterVerifyCredentials:
+    handler: twitter/verifyCredentials/handler.verifyCredentials
+    events:
+      - http:
+          path: twitterVerifyCredentials
+          method: get
