@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import config from '../../config';
-import { appSession } from '../../modules/SessionStorage/appSession';
 import Avatar from '@mui/material/Avatar';
 
-import "./User.css"
+import config from '../../config';
 
+import { appSession } from '../../modules/SessionStorage/appSession';
+import { PostTweet } from '../../modules/Twitter/PostTweet';
+
+import "./User.css"
 interface UserProfile {
     name: string
     screenName: string
@@ -70,6 +72,7 @@ function User() {
         <div>Following: {user.following}</div>
         <div>Statuses: {user.statuses}</div>
       </div>
+      <PostTweet />
     </div>
   );
 }

@@ -35,3 +35,10 @@ functions:
       - http:
           path: twitterVerifyCredentials
           method: get
+
+  twitterPostTweet:
+    handler: twitter/postTweet/handler.postTweet
+    events:
+      - http:
+          path: twitterPostTweet
+          method: post

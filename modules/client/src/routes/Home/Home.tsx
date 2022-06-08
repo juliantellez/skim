@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../public/skim.png';
 import './Home.css';
-import { ConnectToTwitter } from '../../modules/Twitter/Twitter';
+import { ConnectToTwitter } from '../../modules/Twitter/ConnectToTwitter';
 
 function Home() {
   return (
